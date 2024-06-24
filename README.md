@@ -13,7 +13,8 @@ so can be used to check your own PRs before committing and to review other peopl
 3. `cd` to the `act-rules-preview` folder which contains `config.toml` (see below)
 4. Run the `hugo` command with no parameters
 
-The published rules files are in the `public` folder.
+The `contentdir` property in `config.toml` specifies where to find the markdown files.
+The published rules files are in the `public` folder. 
 
 ## Structure
 
