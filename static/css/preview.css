@@ -1,0 +1,145 @@
+@charset "utf-8";
+
+/*****************************************************************************
+	Act Rules CSS File
+****************************************************************************/
+
+/*****************************************************************************
+	No Reset
+****************************************************************************/
+
+/*****************************************************************************
+	Top Level Structure
+****************************************************************************/
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: system-ui, sans-serif;
+    font-size: 1em;
+    line-height: 1.6;
+    padding: 2em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: rgb(0, 90, 106);
+}
+
+nav
+{
+	height: 100%; /* Full-height: remove this if you want "auto" height */
+	width: 10vw; /* Set the width of the sidebar */
+	position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+	z-index: 1; /* Stay on top */
+	top: 0; /* Stay at the top */
+	left: 0;
+	background-color: #eee; 
+	border-right: 1px solid #bbb;
+	overflow-x: hidden; /* Disable horizontal scroll */
+	display: inline-block;
+	padding-left: 1em;
+	padding-top: 16px;
+}
+
+nav a
+{
+	padding: 6px 8px 6px 16px;
+	text-decoration: none;
+	color: #000;
+	display: block;	
+}
+
+nav h1, nav h2
+{
+	margin-top: 0;
+	margin-bottom: 0.25em;
+	margin-left: 14px;
+	font-size: 2em;
+}
+
+h1 span, h2 span 
+{
+    display: block;
+    padding-top: 0.5em;
+    font-size: 1rem;
+}
+
+nav a:link:hover, nav a:link:focus,
+nav a:visited:hover, nav a:visited:focus
+{
+	color: #111;
+	text-decoration: underline;
+}
+
+nav ul 
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul ul
+{
+	padding-left: 2em;
+	line-height: 1.2;
+}
+
+nav li.active > a
+{
+	font-weight: bold;
+}
+
+main {
+    position: relative;
+    left: 10vw; /* Same as the width of the sidebar */
+    top: -22px; /* fix mystery main offset */
+    padding: 0px 10px;
+    width: 85vw;
+}
+
+main h1
+{
+	margin-top: 0;
+}
+
+th 
+{
+	text-align: left;
+}
+
+code {
+    font-family: ui-monospace, monospace;
+    font-size: 95%;
+    margin: 0;
+    border-radius: 6px;
+}
+
+pre
+{
+	border-radius: 3px;
+	margin-bottom: 1em;
+	padding: 1em;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    body, nav {
+        color: #D2D2D2;
+        background-color: #262424;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: #909090;
+    }
+
+    nav {
+        border-color: #505050;
+    }
+
+    nav a, a:link, a:visited {
+        color: #87ceff;
+    }
+
+    nav a:link:hover, nav a:link:focus, nav a:visited:hover, nav a:visited:focus {
+       color: #D2D2D2;
+    }
+}

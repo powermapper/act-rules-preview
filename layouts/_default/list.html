@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>{{ .Title }}</title>
+  <link type='text/css' href='{{ "css/preview.css" }}' rel='stylesheet' />
+</head>
+<body>
+  <nav>
+    {{ partial "shared-nav.html" . }}
+  </nav>
+  <main id='main' >
+    <!-- this generates taxonomy lists (e.g. tags and categories in blogs) 
+      TODO use this to generate taxomonies for input_aspects, accessibility_requirements etc
+    -->
+    <h1>{{ .Title | markdownify }}</h1>
+    {{ .Content }}
+  </main>
+</body>
+</html>

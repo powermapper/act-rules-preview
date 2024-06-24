@@ -1,0 +1,15 @@
+
+<!-- sidebar start -->
+    <h2>{{ .Site.Title }} <span>Contents</span></h2>
+    <ul>
+        {{ $currentPage := . }}
+
+        {{ range .Site.Pages }}
+
+            <li>
+                <a href="{{ .Permalink }}">{{ .Params.name }}</a>
+            </li>
+            
+        {{ end }}
+    </ul>
+

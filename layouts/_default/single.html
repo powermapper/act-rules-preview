@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>{{ .Params.name }}</title>
+  <link type='text/css' href='{{ "css/preview.css" }}' rel='stylesheet' />
+  <meta name="description" content="{{ .Params.description }}" />
+</head>
+<body>
+  <nav>
+    {{ partial "shared-nav" . }}
+  </nav>
+  <main id='main' >
+    <!-- render name and description from markdown front matter -->
+    <h1>{{ .Params.name }}</h1>
+    <p>{{ .Params.description }}</p>
+    <!-- render markdown content -->
+    {{ .Content }}
+  </main>
+</body>
+</html>

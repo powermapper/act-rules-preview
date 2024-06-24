@@ -1,0 +1,8 @@
+baseurl = ""
+languageCode = "en"
+title = "ACT Rules"
+contentdir = "../act-rules/_rules"
+#publishDir = "rules"
+relativeURLs = true
+uglyURLs = true
+disableKinds = ["RSS", "sitemap"]

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>{{ .Title }} Help</title>
+  <link type='text/css' href='{{ "css/preview.css" }}' rel='stylesheet' />
+  <meta name="description" content="Documentation metadata for {{ .Site.Title }}" />
+</head>
+<body>
+  <nav>
+    {{ partial "shared-nav.html" . }}
+  </nav>
+  <main id='main' >
+    <!-- this generates the home page, which currently shows meta data -->
+    {{ $page := index (.Site.Pages) 0 }}
+    <h1>{{ .Site.Title }} <span>Documentation Build Information</span></h1>
+    <p>Last modified: {{ .Site.LastChange.Format "January 2, 2006" }}</p>
+    <p>Build date: {{ time.Now.Format "January 2, 2006" }}</p>
+  </main>
+</body>
+</html>
